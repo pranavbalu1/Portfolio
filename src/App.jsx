@@ -35,6 +35,13 @@ const App = () => {
     titleSection.current?.scrollIntoView({ behavior: "smooth" });
     console.log("scrolling");
   };
+
+  const creditSection = useRef(null);
+  const creditSection2 = () => {
+    creditSection.current?.scrollIntoView({ behavior: "smooth" });
+    console.log("scrolling");
+  };
+
   useEffect(() => {
     titleSection2();
   }, []);
@@ -43,7 +50,7 @@ const App = () => {
 
       <div id="landingPage">
         
-        <NavBar goToHome={titleSection2} goToProfile={profileScroll2}/>
+        <NavBar goToHome={titleSection2} goToProfile={profileScroll2} goToCredits={creditSection2}/>
         <section id="titleSection" ref={titleSection}>
           <flex>
             <h1 id="titleCard">Pranav Balu</h1>
@@ -104,11 +111,6 @@ to learn"/>
           <h1 id="title"> Projects </h1>
         </section>
 
-        <section>
-          <span id="creditSection">
-            <h2 id="thanks">Thanks For Visiting!</h2>
-          </span>
-        </section>
       </div>
       <Particles
         id="tsparticles"

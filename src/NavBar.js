@@ -35,9 +35,11 @@ export default function NavBar(props) {
         <button className="icon" onClick={props.goToProfile}>
           <AiOutlineProject />
         </button>
+        {/*
         <button className="icon" onClick={goToThanks}>
           <MdOutlineWavingHand />
         </button>
+  */}
         <button className="icon" onClick={() => openInNewTab('https://www.linkedin.com/in/pranavbalu')}>
             <AiOutlineLinkedin />
         </button>
