@@ -10,7 +10,7 @@ import { FaReact, FaPython, FaJava, FaHtml5, FaCss3 } from "react-icons/fa";
 import { SiFlask, SiMongodb, SiFirebase, SiCplusplus, SiDjango } from "react-icons/si";
 import SkillComponent from "./SkillComponent.js";
 import NavBar from "./NavBar.js";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 
 
@@ -35,13 +35,14 @@ const App = () => {
     titleSection.current?.scrollIntoView({ behavior: "smooth" });
     console.log("scrolling");
   };
-
-  titleSection.current?.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    titleSection2();
+  }, []);
   return (
     <>
 
       <div id="landingPage">
-
+        
         <NavBar goToHome={titleSection2} goToProfile={profileScroll2}/>
         <section id="titleSection" ref={titleSection}>
           <flex>
