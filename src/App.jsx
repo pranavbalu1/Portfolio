@@ -36,10 +36,79 @@ const App = () => {
     console.log("scrolling");
   };
 
-
-
+  titleSection.current?.scrollIntoView({ behavior: "smooth" });
   return (
     <>
+
+      <div id="landingPage">
+
+        <NavBar goToHome={titleSection2} goToProfile={profileScroll2}/>
+        <section id="titleSection" ref={titleSection}>
+          <flex>
+            <h1 id="titleCard">Pranav Balu</h1>
+            <h2>
+              I am a
+              <br />
+              <Typewriter
+                id="typewriter"
+                words={[
+                  "Software Engineer",
+                  "Full Stack Developer",
+                  "ML and AI Enthusiast",
+                ]}
+                loop={0}
+                cursor
+                cursorStyle="<"
+                typeSpeed={90}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </h2>
+
+          </flex>
+        </section>
+
+        <section id="profileSection" ref={profileSection}>
+          <span id="cardSection">
+            <Card className="cards" titleLeft="Cotes" 
+            bodyLeft="A Productivity tool for programmers that focused on note-taking
+            with code. Cotes brought an unique feature where programmers
+            could take notes and code onto one document; however, unlike
+            many other note taking tools, code could be run and displayed
+            onto the document" titleRight="DrowsyDriver" bodyRight="Using a Raspberry Pi 3, I was able to develop a
+            an add-on accessory to cars to alert
+            drowsy drivers with facial recognition. This was my very first hardware project and I
+            was seeking challenge myself by trying something out of my expertise (software
+            sided project)"/>
+            <Card className="cards" titleLeft="Portfolio" bodyLeft="A project in development to display and show off my skills and
+accomplishments! I'm using Particle.Js to create flawless animations and React.Js to create a breathtaking website" titleRight="FosterFinder" bodyRight="A web app designed to help networking between foster children
+and families willing to adopt. The website was meant to help
+children find families and to bring resources to new parents looking
+to learn"/>
+          </span>
+          <span className="skillSection">
+          <SkillComponent name="React" icon={<FaReact className="icons" />} />
+          <SkillComponent name="Python" icon={<FaPython className="icons" />} />
+          <SkillComponent name="Java" icon={<FaJava className="icons" />} />
+          <SkillComponent name="Flask" icon={<SiFlask className="icons" />} />
+          <SkillComponent name="Django" icon={<SiDjango className="icons" />} />
+          </span>
+          <span className="skillSection">
+          <SkillComponent name="HTML5" icon={<FaHtml5 className="icons" />} />
+          <SkillComponent name="CSS3" icon={<FaCss3 className="icons" />} />
+          <SkillComponent name="MongoDB" icon={<SiMongodb className="icons" />} />
+          <SkillComponent name="FireBase" icon={<SiFirebase className="icons" />} />
+          <SkillComponent name="C++" icon={<SiCplusplus className="icons" />} />
+          </span>
+          <h1 id="title"> Projects </h1>
+        </section>
+
+        <section>
+          <span id="creditSection">
+            <h2 id="thanks">Thanks For Visiting!</h2>
+          </span>
+        </section>
+      </div>
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -704,75 +773,6 @@ const App = () => {
           },
         }}
       />
-      <div id="landingPage">
-
-        <NavBar goToHome={titleSection2} goToProfile={profileScroll2}/>
-        <section id="titleSection" ref={titleSection}>
-          <flex>
-            <h1 id="titleCard">Pranav Balu</h1>
-            <h2>
-              I am a
-              <br />
-              <Typewriter
-                id="typewriter"
-                words={[
-                  "Software Engineer",
-                  "Full Stack Developer",
-                  "ML and AI Enthusiast",
-                ]}
-                loop={0}
-                cursor
-                cursorStyle="<"
-                typeSpeed={90}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              />
-            </h2>
-
-          </flex>
-        </section>
-
-        <section id="profileSection" ref={profileSection}>
-          <span id="cardSection">
-            <Card className="cards" titleLeft="Cotes" 
-            bodyLeft="A Productivity tool for programmers that focused on note-taking
-            with code. Cotes brought an unique feature where programmers
-            could take notes and code onto one document; however, unlike
-            many other note taking tools, code could be run and displayed
-            onto the document" titleRight="DrowsyDriver" bodyRight="Using a Raspberry Pi 3, I was able to develop a
-            an add-on accessory to cars to alert
-            drowsy drivers with facial recognition. This was my very first hardware project and I
-            was seeking challenge myself by trying something out of my expertise (software
-            sided project)"/>
-            <Card className="cards" titleLeft="Portfolio" bodyLeft="A project in development to display and show off my skills and
-accomplishments! I'm using Particle.Js to create flawless animations and React.Js to create a breathtaking website" titleRight="FosterFinder" bodyRight="A web app designed to help networking between foster children
-and families willing to adopt. The website was meant to help
-children find families and to bring resources to new parents looking
-to learn"/>
-          </span>
-          <span className="skillSection">
-          <SkillComponent name="React" icon={<FaReact className="icons" />} />
-          <SkillComponent name="Python" icon={<FaPython className="icons" />} />
-          <SkillComponent name="Java" icon={<FaJava className="icons" />} />
-          <SkillComponent name="Flask" icon={<SiFlask className="icons" />} />
-          <SkillComponent name="Django" icon={<SiDjango className="icons" />} />
-          </span>
-          <span className="skillSection">
-          <SkillComponent name="HTML5" icon={<FaHtml5 className="icons" />} />
-          <SkillComponent name="CSS3" icon={<FaCss3 className="icons" />} />
-          <SkillComponent name="MongoDB" icon={<SiMongodb className="icons" />} />
-          <SkillComponent name="FireBase" icon={<SiFirebase className="icons" />} />
-          <SkillComponent name="C++" icon={<SiCplusplus className="icons" />} />
-          </span>
-          <h1 id="title"> Projects </h1>
-        </section>
-
-        <section>
-          <span id="creditSection">
-            <h2 id="thanks">Thanks For Visiting!</h2>
-          </span>
-        </section>
-      </div>
     </>
   );
 };
