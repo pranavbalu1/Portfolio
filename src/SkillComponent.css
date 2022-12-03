@@ -1,0 +1,15 @@
+
+.skillButton {
+    width: 8vw;
+    height: 4vw;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    border-radius: 40px;
+
+    display: flex;
+    flex-direction: row;
+}
