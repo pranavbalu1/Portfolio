@@ -83,16 +83,16 @@ const App = () => {
             with code. Cotes brought an unique feature where programmers
             could take notes and code onto one document; however, unlike
             many other note taking tools, code could be run and displayed
-            onto the document" titleRight="DrowsyDriver" bodyRight="Using a Raspberry Pi 3, I was able to develop a
+            onto the document" leftLink="" titleRight="DrowsyDriver" bodyRight="Using a Raspberry Pi 3, I was able to develop a
             an add-on accessory to cars to alert
             drowsy drivers with facial recognition. This was my very first hardware project and I
             was seeking challenge myself by trying something out of my expertise (software
-            sided project)"/>
+            sided project)" rightLink="https://github.com/pranavbalu1/DrowsyDrivingServer" /> 
             <Card className="cards" titleLeft="Portfolio" bodyLeft="A project in development to display and show off my skills and
-accomplishments! I'm using Particle.Js to create flawless animations and React.Js to create a breathtaking website" titleRight="FosterFinder" bodyRight="A web app designed to help networking between foster children
+accomplishments! I'm using Particle.Js to create flawless animations and React.Js to create a breathtaking website" leftLink="https://github.com/pranavbalu1/Portfolio" titleRight="FosterFinder" bodyRight="A web app designed to help networking between foster children
 and families willing to adopt. The website was meant to help
 children find families and to bring resources to new parents looking
-to learn"/>
+to learn" rightLink="https://github.com/pranavbalu1/FosterFinder"/>
           </span>
           <span className="skillSection">
           <SkillComponent name="React" icon={<FaReact className="icons" />} />

@@ -1,6 +1,10 @@
 import "./Card.css";
 import {VscGithub} from "react-icons/vsc";
 
+const openInNewTab = url => {
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
+
 function cardRight(props){
     if (props.titleRight != null) {
         return (<div class="card cardright">
@@ -8,7 +12,7 @@ function cardRight(props){
               <p>
                   {props.bodyRight}
                   <br/>
-                  <button id="linkButton" onClick={""}><VscGithub/></button>
+                  <button id="linkButton" onClick={() => openInNewTab(props.rightLink)}><VscGithub/></button>
               </p>
               
               
@@ -30,7 +34,7 @@ export default function Card(props) {
               <p>
                   {props.bodyLeft}
               </p>
-              <button id="linkButton"><VscGithub/></button>
+              <button id="linkButton" onClick={() => openInNewTab(props.leftLink)} ><VscGithub/></button>
               
           </div>
 
