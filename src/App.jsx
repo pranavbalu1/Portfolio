@@ -83,7 +83,7 @@ const App = () => {
             with code. Cotes brought an unique feature where programmers
             could take notes and code onto one document; however, unlike
             many other note taking tools, code could be run and displayed
-            onto the document" leftLink="" titleRight="DrowsyDriver" bodyRight="Using a Raspberry Pi 3, I was able to develop a
+            onto the document" leftLink="https://github.com/mithunb9/cotes" titleRight="DrowsyDriver" bodyRight="Using a Raspberry Pi 3, I was able to develop a
             an add-on accessory to cars to alert
             drowsy drivers with facial recognition. This was my very first hardware project and I
             was seeking challenge myself by trying something out of my expertise (software
