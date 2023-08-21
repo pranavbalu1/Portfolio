@@ -1,0 +1,39 @@
+import React from "react";
+import {BsArrowDownCircle} from "react-icons/bs";
+import { Typewriter } from 'react-simple-typewriter'
+
+
+let profile = "Passionate about applications of machine learning in day-to-day life and web development, highlighted through personal projects and relevant experiences.";
+
+function Dashboard() {
+
+    return (
+        <>
+
+
+            <div className="flex flex-col lg:flex-row items-center select-none justify-center h-[70vh] lg:h-[90vh] gap-[10%]" >
+                <section className=" w-[80vw] lg:w-[30vw] flex flex-col  justify-center" >
+                    <h1 className="text-9xl lg:text-8xl text-[#444] font-bold mb-[5%]" >Pranav <br></br> Balu</h1>
+                    <p className="text-3xl lg:text-2xl text-[#444] " >I'm a <Typewriter typeSpeed={100} deleteSpeed={80} delaySpeed={1000} loop={true} cursor={true} cursorColor="#444444" cursorStyle="_" words={["Machine Learning Enthusiasist", "Web Developer", "Software Developer", "Passionate Student"]} /></p>
+                    
+
+                </section>
+                <section className="w-[80vw] lg:w-[30vw] " > 
+                    <video  autoPlay loop >
+                        <source type="video/webm" src="https://storage.googleapis.com/gweb-aiaz.appspot.com/animations/Masthead.webm" />
+                    </video>
+                </section>
+
+            </div>
+            <div className=" select-none flex flex-row items-center  justify-center " >
+                <button className="animate-bounce" >
+                    <BsArrowDownCircle color="#444" size={60} className=" hover:animate-pulse text-[#444] text-5xl" />
+                </button>
+            </div>
+
+        </>
+    );
+}
+
+// Path: src/screens/dashboard.tsx
+export default Dashboard;
