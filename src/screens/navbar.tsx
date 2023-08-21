@@ -10,25 +10,18 @@ import { link } from "fs";
 //data
 let Projects_Data = [
     {
-        name: "Project 1",
+        name: "Cotes",
         description: "This is a project",
-        applied_languages: ["Next.js", "React", "TailwindCSS"],
-        link: "zxczxcz",
-        production: "sasdasd"
+        applied_languages: ["Next.js", "Typescript", "MongoDB"],
+        link: "https://github.com/mithunb9/cotes",
+        production: "https://cotes.mithunb.com/"
     },
     {
-        name: "Project 2",
+        name: "DrowseDetect",
         description: "This is a project",
         applied_languages: ["Next.js", "React", "TailwindCSS"],
-        link: "",
-        production: "sasdasd"
-    },
-    {
-        name: "Project 3",
-        description: "This is a project",
-        applied_languages: ["Next.js", "React", "TailwindCSS"],
-        link: "",
-        production: "sasdasd"
+        link: "https://github.com/pranavbalu1/DrowsyDrivingServer",
+        production: ""
     },
 ]
 
@@ -56,14 +49,14 @@ function project(){
 
     return (
         <>
-            <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 flex items-center justify-center no-select mt-[50vh] lg:mt-[0] ">
+            <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 flex items-center justify-center no-select mt-[50vh] lg:mt-[0] ">
                 {Projects_Data.map((project) => (
 
                         <div className="flex flex-col items-center justify-between py-[15%] border-4 rounded-xl lg:rounded-3xl gap-8 p-2 w-[80vw] mb-[5vh] lg:mb-[0] h-fit lg:w-[20vw] lg:h-[60vh]  bg-[#eaddcf] border-[#d8c8b8] hover:bg-[#3b855c] hover:border-[#3b855c] hover:text-white delay-75 duration-500 ">
                             <h1 className="text-5xl  lg:text-2xl font-bold">{project.name}</h1>
                             <p className="text-4xl lg:text-lg">{project.description}</p>
                             <div className="flex flex-col items-center justify-center gap-5 w-[100%]" >
-                            <div className="flex flex-row gap-4 w-[100%] bg-[#d8c8b820]  items-center justify-center text-3xl lg:text-base ">
+                            <div className="flex flex-row gap-4 w-[100%] bg-[#d8c8b820]  items-center justify-center text-2xl lg:text-base ">
                                 {project.applied_languages.map((language) => (
 
                                         <h1 className="text-md font-bold">{language}</h1>
@@ -71,7 +64,7 @@ function project(){
                                 ))}
                             </div>
                             <button onClick={() => window.open(project.link, '_blank')} className="flex flex-row gap-4 w-[80%] lg:w-[100%] bg-[#d8c8b890] border-2 rounded-xl items-center justify-center text-3xl lg:text-base ">
-                                    Github: {project.link}
+                                    Github
                             </button>
 
                             </div>
