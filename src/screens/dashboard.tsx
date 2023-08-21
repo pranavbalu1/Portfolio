@@ -1,6 +1,7 @@
 import React from "react";
 import {BsArrowDownCircle} from "react-icons/bs";
 import { Typewriter } from 'react-simple-typewriter'
+import {BsGithub, BsLinkedin} from "react-icons/bs";
 
 
 let profile = "Passionate about applications of machine learning in day-to-day life and web development, highlighted through personal projects and relevant experiences.";
@@ -9,7 +10,16 @@ function Dashboard() {
 
     return (
         <>
-
+            <div className="flex flex-row w-[15vw] m-[1vw] items-center justify-evenly  h-[7vh] fixed " >
+                <button onClick={() => window.open("https://github.com/pranavbalu1", '_blank')} className="flex flex-row items-center justify-evenly w-[30%] text-xl" >
+                    
+                    <BsGithub color="#444" size={35} />
+                </button>
+                <button onClick={() => window.open("https://www.linkedin.com/in/pranavbalu/", '_blank')} className="flex flex-row items-center justify-evenly w-[30%] text-xl" >
+                    
+                    <BsLinkedin color="#444" size={35} />
+                </button>
+            </div>
 
             <div className="flex flex-col lg:flex-row items-center select-none justify-center h-[70vh] lg:h-[90vh] gap-[10%]" >
                 <section className=" w-[80vw] lg:w-[30vw] flex flex-col  justify-center" >
