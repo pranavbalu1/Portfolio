@@ -4,7 +4,6 @@ import { Typewriter } from 'react-simple-typewriter'
 import {BsGithub, BsLinkedin} from "react-icons/bs";
 
 
-let profile = "Passionate about applications of machine learning in day-to-day life and web development, highlighted through personal projects and relevant experiences.";
 
 function Dashboard() {
 
@@ -12,11 +11,11 @@ function Dashboard() {
         <>
             <div className="flex flex-row w-[15vw] m-[1vw] items-center justify-evenly  h-[7vh] fixed " >
                 <button onClick={() => window.open("https://github.com/pranavbalu1", '_blank')} className="flex flex-row items-center justify-evenly w-[30%] text-xl" >
-                    
+
                     <BsGithub color="#444" size={35} />
                 </button>
                 <button onClick={() => window.open("https://www.linkedin.com/in/pranavbalu/", '_blank')} className="flex flex-row items-center justify-evenly w-[30%] text-xl" >
-                    
+
                     <BsLinkedin color="#444" size={35} />
                 </button>
             </div>
@@ -25,10 +24,10 @@ function Dashboard() {
                 <section className=" w-[80vw] lg:w-[30vw] flex flex-col  justify-center" >
                     <h1 className="text-9xl lg:text-8xl text-[#444] font-bold mb-[5%]" >Pranav <br></br> Balu</h1>
                     <p className="text-3xl lg:text-2xl text-[#444] " >I'm a <Typewriter typeSpeed={100} deleteSpeed={80} delaySpeed={1000} loop={true} cursor={true} cursorColor="#444444" cursorStyle="_" words={["Machine Learning Enthusiasist", "Web Developer", "Software Developer", "Passionate Student"]} /></p>
-                    
+
 
                 </section>
-                <section className="w-[80vw] lg:w-[30vw] " > 
+                <section className="w-[80vw] lg:w-[30vw] " >
                     <video  autoPlay loop >
                         <source type="video/webm" src="https://storage.googleapis.com/gweb-aiaz.appspot.com/animations/Masthead.webm" />
                     </video>

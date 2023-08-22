@@ -36,18 +36,25 @@ let skills_data_Icons = [["Git", <BsGit size={35} />], ["GitHub", <BsGithub size
 
 let Experience_Data = [
     {
-        title: "Software Developer",
-        company: "Company 1",
-        description: "Job Description",
+        title: "Frontend Software Engineer",
+        company: "Gazelle Ecosolutions",
+        description: "As a Frontend Software Engineer, I systematically built out the Gazelle Hub and implemented multiple RESTful API endpoints and asynchronous operations between client and server sides. ",
         applied_languages: ["Next.js", "React", "TailwindCSS"],
-        dates: "2021-2021"
+        dates: "March 2023 - Present"
     },
     {
-        title: "Software Developer",
-        company: "Company 1",
-        description: "Job Description",
-        applied_languages: ["Next.js", "React", "TailwindCSS"],
-        dates: "2021-2021"
+        title: "Techincal Consulting Intern",
+        company: "Excelsior Consulting Services",
+        description: "Alongside a professional techinical consultant, I assisted in writing reports on industry trends, and based suggestions -- from a pretuned ML algorithm -- for individual corporations' development.",
+        applied_languages: ["Python", "Microsoft Suite", "Predictive Analysis"],
+        dates: "June 2021 - July 2021"
+    },
+    {
+        title: "Director Of Technology",
+        company: "The Teen Trillionaire",
+        description: "As a lead role, I collaborated and mentored a team of 3 developers, promoting synergetic partnerships and teamwork. I worked cross-functionally with key stakeholders to mobility for the services provided.",
+        applied_languages: ["Flutter", "Dart", "Android Studio"],
+        dates: "Aug 2020 - Nov 2020"
     },
 ]
 
@@ -56,14 +63,14 @@ function project(){
 
     return (
         <>
-            <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 flex items-center justify-center no-select lg:mt-[0] ">
+            <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 flex items-center justify-center no-select  mt-[15vh] lg:mt-[0] ">
                 {Projects_Data.map((project) => (
 
                         <div className="flex flex-col items-center justify-between py-[5%] border-4 rounded-xl lg:rounded-3xl gap-8 p-2 w-[80vw] mb-[5vh] lg:mb-[0] h-fit lg:w-[20vw] lg:h-[60vh]  bg-[#eaddcf] border-[#d8c8b8] hover:bg-[#3b855c] hover:border-[#3b855c] hover:text-white delay-75 duration-500 ">
                             <h1 className="text-5xl  lg:text-2xl font-bold">{project.name}</h1>
-                            <p className="text-4xl lg:text-base w-[90%] ">{project.description}</p>
+                            <p className="text-3xl leading-10 lg:leading-0 lg:text-base w-[90%] ">{project.description}</p>
                             <div className="flex flex-col items-center justify-center gap-5 w-[100%]" >
-                            <div className="flex flex-row gap-4 w-[100%] bg-[#d8c8b820]  items-center justify-center text-2xl lg:text-base ">
+                            <div className="flex flex-row gap-4 w-[90%] bg-[#d8c8b820]  items-center justify-evenly text-3xl lg:text-base ">
                                 {project.applied_languages.map((language) => (
 
                                         <h1 className="text-md font-bold">{language}</h1>
@@ -109,14 +116,17 @@ function experience(){
 
     return(
     <>
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex items-center justify-center no-select ">
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-[15vh] lg:mt-[10vh]  flex items-center justify-center no-select ">
             {Experience_Data.map((experience) => (
 
-                        <div className="flex flex-col items-center justify-between py-[15%] border-4 rounded-xl lg:rounded-3xl gap-8 p-2 w-[80vw] h-fit lg:w-[20vw] mb-[5vh] lg:mb-[5vh] lg:h-[60vh]  bg-[#eaddcf] border-[#d8c8b8] hover:bg-[#3b855c] hover:border-[#3b855c] hover:text-white delay-75 duration-500 ">
+                        <div className="flex flex-col text-center gap-8 py-[5%] items-center justify-evenly border-4 rounded-xl lg:rounded-3xl p-2 w-[80vw] lg:w-[20vw] mb-[5vh] lg:mb-[5vh] h-fit lg:h-[70vh]  bg-[#eaddcf] border-[#d8c8b8] hover:bg-[#bc7e09] hover:border-[#bc7e09] hover:text-white delay-75 duration-500 ">
                             <h1 className="text-5xl  lg:text-2xl font-bold">{experience.title}</h1>
-                            <h1 className="text-5xl  lg:text-2xl font-bold">{experience.company}</h1>
-                            <p className="text-4xl lg:text-lg">{experience.description}</p>
-                            <div className="flex flex-col items-center justify-center gap-5 w-[100%]" >
+                            <h1 className="text-5xl  lg:text-xl font-bold">{experience.company}</h1>
+                            <p className="text-3xl lg:text-base ">
+                                    {experience.dates}
+                            </p>
+                            <p className="text-3xl text-start leading-10 lg:leading-0 w-[90%] lg:text-base">{experience.description}</p>
+
                             <div className="flex flex-row gap-4 w-[100%] bg-[#d8c8b820]  items-center justify-center text-3xl lg:text-base ">
                                 {experience.applied_languages.map((language) => (
 
@@ -124,10 +134,8 @@ function experience(){
 
                                 ))}
                             </div>
-                            <button className="flex flex-row gap-4 w-[100%]  items-center justify-center text-3xl lg:text-base ">
-                                    {experience.dates}
-                            </button>
-                            </div>
+
+
                         </div>
                 ))}
         </section>
@@ -140,12 +148,12 @@ function Navbar(){
     return (
         <>
 
-            <section className=" lg:flex place-self-center  grid grid-cols-2  lg:flex-row  items-center justify-center gap-[5%] mx-[10vw]  mb-[5vh] lg:mb-[0] mt-[5vh] lg:mt-[10vh] w-[80vw] h-[10vh] lg:h-[10vh] " >
+            <section className=" lg:flex place-self-center  grid grid-cols-3  lg:flex-row  items-center justify-center gap-[5%] mx-[10vw]  mb-[5vh] lg:mb-[0] mt-[5vh] lg:mt-[10vh] w-[80vw] h-[10vh] lg:h-[10vh] " >
                 <button onClick={() => {window.scrollTo({top: 10000, behavior: 'smooth'}); setBioState("Projects")}} className=" lg:text-lg text-3xl px-[4%] py-[2%] lg:w-fit lg:px-[2%] lg:py-[0.25%]  lg:border-2 rounded-full bg-[#eaddcf] border-[#d8c8b8] hover:bg-[#3b855c] hover:border-[#3b855c] hover:text-white delay-75 duration-500 " >
                     Projects
                 </button>
                 <button onClick={() => {window.scrollTo({top: 10000, behavior: 'smooth'});  setBioState("Frameworks/Languages")}} className=" lg:text-lg text-3xl px-[4%] py-[2%] lg:w-fit lg:px-[2%] lg:py-[0.25%] lg:border-2 rounded-full  bg-[#eaddcf] border-[#d8c8b8] hover:bg-[#5b7b9a] hover:border-[#5b7b9a] hover:text-white delay-75 duration-500 " >
-                    Frameworks/Languages
+                    Frameworks <br/> Languages
                 </button>
                 <button onClick={() => {window.scrollTo({top: 1000, behavior: 'smooth'}); setBioState("Experience")}} className=" lg:text-lg text-3xl px-[4%] py-[2%] lg:w-fit lg:px-[2%] lg:py-[0.25%] lg:border-2 rounded-full  bg-[#eaddcf] border-[#d8c8b8] hover:bg-[#bc7e09] hover:border-[#bc7e09] hover:text-white delay-75 duration-500 " >
                     Work History
