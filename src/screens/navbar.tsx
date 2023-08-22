@@ -49,7 +49,7 @@ function project(){
 
     return (
         <>
-            <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 flex items-center justify-center no-select mt-[50vh] lg:mt-[0] ">
+            <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 flex items-center justify-center no-select  lg:mt-[0] ">
                 {Projects_Data.map((project) => (
 
                         <div className="flex flex-col items-center justify-between py-[15%] border-4 rounded-xl lg:rounded-3xl gap-8 p-2 w-[80vw] mb-[5vh] lg:mb-[0] h-fit lg:w-[20vw] lg:h-[60vh]  bg-[#eaddcf] border-[#d8c8b8] hover:bg-[#3b855c] hover:border-[#3b855c] hover:text-white delay-75 duration-500 ">
