@@ -11,14 +11,21 @@ import { link } from "fs";
 let Projects_Data = [
     {
         name: "Cotes",
-        description: "This is a project",
+        description: "Cotes aims to revolutionize taking notes and learning in Computer Science. Originally built for HackSMU 2022, we aim to be a versatile, open-source note taking solution for professionals, students and hobbyists alike. This project is a WIP and undergoing major restructuring.",
         applied_languages: ["Next.js", "Typescript", "MongoDB"],
         link: "https://github.com/mithunb9/cotes",
         production: "https://cotes.mithunb.com/"
     },
     {
         name: "DrowseDetect",
-        description: "This is a project",
+        description: "Using a Raspberry Pi 3, I was able to develop an add-on accessory to cars to alert drowsy drivers with facial recognition. This was my very first hardware project and I was seeking challenge myself by trying something out of my expertise.",
+        applied_languages: ["Next.js", "React", "TailwindCSS"],
+        link: "https://github.com/pranavbalu1/DrowsyDrivingServer",
+        production: ""
+    },
+        {
+        name: "Doodle!",
+        description: "Doodle! is a WIP project that I aspire to build out in the near future! It's a famous game but with my twist. The idea is that you compete with a ML algorithm to guess your friends doodle. ",
         applied_languages: ["Next.js", "React", "TailwindCSS"],
         link: "https://github.com/pranavbalu1/DrowsyDrivingServer",
         production: ""
@@ -49,12 +56,12 @@ function project(){
 
     return (
         <>
-            <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 flex items-center justify-center no-select  lg:mt-[0] ">
+            <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 flex items-center justify-center no-select lg:mt-[0] ">
                 {Projects_Data.map((project) => (
 
-                        <div className="flex flex-col items-center justify-between py-[15%] border-4 rounded-xl lg:rounded-3xl gap-8 p-2 w-[80vw] mb-[5vh] lg:mb-[0] h-fit lg:w-[20vw] lg:h-[60vh]  bg-[#eaddcf] border-[#d8c8b8] hover:bg-[#3b855c] hover:border-[#3b855c] hover:text-white delay-75 duration-500 ">
+                        <div className="flex flex-col items-center justify-between py-[5%] border-4 rounded-xl lg:rounded-3xl gap-8 p-2 w-[80vw] mb-[5vh] lg:mb-[0] h-fit lg:w-[20vw] lg:h-[60vh]  bg-[#eaddcf] border-[#d8c8b8] hover:bg-[#3b855c] hover:border-[#3b855c] hover:text-white delay-75 duration-500 ">
                             <h1 className="text-5xl  lg:text-2xl font-bold">{project.name}</h1>
-                            <p className="text-4xl lg:text-lg">{project.description}</p>
+                            <p className="text-4xl lg:text-base w-[90%] ">{project.description}</p>
                             <div className="flex flex-col items-center justify-center gap-5 w-[100%]" >
                             <div className="flex flex-row gap-4 w-[100%] bg-[#d8c8b820]  items-center justify-center text-2xl lg:text-base ">
                                 {project.applied_languages.map((language) => (
